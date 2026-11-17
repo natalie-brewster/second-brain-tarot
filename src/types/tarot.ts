@@ -12,7 +12,11 @@ export interface Suit {
 export interface Card {
   id: string;
   suitId: string;
-  title: string;
+  /** Tarot-convention name: an archetype name for Major Arcana-equivalent
+   * cards, or "Rank of Suit" (Ace of Cups, Two of Wands, ...) for minors. */
+  tarotTitle: string;
+  /** Plain-language name used in the "brain" lens. */
+  brainTitle: string;
   icon: string;
   color: string;
   fragment: string;
@@ -28,4 +32,8 @@ export function suitLabel(suit: Suit, lens: Lens): { name: string; icon: string 
   return lens === "tarot"
     ? { name: suit.tarotName, icon: suit.tarotIcon }
     : { name: suit.brainName, icon: suit.brainIcon };
+}
+
+export function cardLabel(card: Card, lens: Lens): string {
+  return lens === "tarot" ? card.tarotTitle : card.brainTitle;
 }

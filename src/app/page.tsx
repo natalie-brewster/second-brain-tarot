@@ -5,6 +5,7 @@ import { DeckSpread } from "@/components/DeckSpread";
 import { Legend } from "@/components/Legend";
 import { LensToggle } from "@/components/LensToggle";
 import { getDeck } from "@/lib/deck";
+import { cardLabel } from "@/types/tarot";
 import type { Card, Lens } from "@/types/tarot";
 
 export default function Home() {
@@ -40,7 +41,7 @@ export default function Home() {
         <div className="mt-4 max-w-md rounded-xl border border-neutral-300 bg-white px-6 py-4 text-center shadow-sm">
           <div className="text-2xl">{selected.icon}</div>
           <div className="mt-1 font-medium text-neutral-800">
-            {selected.title}
+            {cardLabel(selected, lens)}
           </div>
           <div className="mt-2 text-sm text-neutral-600">
             {selected.fragment}

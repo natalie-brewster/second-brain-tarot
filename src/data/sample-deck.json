@@ -42,15 +42,15 @@
     }
   ],
   "cards": [
-    { "id": "sample-01", "suitId": "majors", "title": "The Unfinished Thing", "icon": "🌀", "color": "#dbe9f6", "fragment": "Sample placeholder fragment — something you started and keep circling back to without quite finishing." },
-    { "id": "sample-02", "suitId": "majors", "title": "The Pattern You Keep Noticing", "icon": "🔁", "color": "#d8ecf0", "fragment": "Sample placeholder fragment — a theme that shows up in totally different contexts, again and again." },
-    { "id": "sample-03", "suitId": "cups", "title": "The Honest Conversation", "icon": "🗣️", "color": "#dde8f7", "fragment": "Sample placeholder fragment — a note about saying the hard thing to someone you care about." },
-    { "id": "sample-04", "suitId": "cups", "title": "The Friend Who Shows Up", "icon": "🤝", "color": "#fbe8d2", "fragment": "Sample placeholder fragment — someone whose consistency you've come to rely on." },
-    { "id": "sample-05", "suitId": "wands", "title": "The Idea You Haven't Told Anyone", "icon": "🌱", "color": "#e1f0d9", "fragment": "Sample placeholder fragment — a project idea still too new and fragile to say out loud." },
-    { "id": "sample-06", "suitId": "wands", "title": "The Side Project That Won't Die", "icon": "⚙️", "color": "#e6e6e6", "fragment": "Sample placeholder fragment — something you keep coming back to even without a deadline." },
-    { "id": "sample-07", "suitId": "swords", "title": "The Decision You're Avoiding", "icon": "🌪️", "color": "#e3e4ec", "fragment": "Sample placeholder fragment — a choice you already know the shape of but haven't made yet." },
-    { "id": "sample-08", "suitId": "swords", "title": "The Boundary You Need to Set", "icon": "🧱", "color": "#f6ddd2", "fragment": "Sample placeholder fragment — a limit you've been meaning to say out loud." },
-    { "id": "sample-09", "suitId": "pentacles", "title": "The Milestone You're Underselling", "icon": "📈", "color": "#fbdfe0", "fragment": "Sample placeholder fragment — progress you made that you haven't given yourself credit for." },
-    { "id": "sample-10", "suitId": "pentacles", "title": "The Next Small Step", "icon": "🪜", "color": "#f1e6d2", "fragment": "Sample placeholder fragment — not the big leap, just the next concrete move." }
+    { "id": "sample-01", "suitId": "majors", "tarotTitle": "The Spiral", "brainTitle": "The Unfinished Thing", "icon": "🌀", "color": "#dbe9f6", "fragment": "Sample placeholder fragment — something you started and keep circling back to without quite finishing." },
+    { "id": "sample-02", "suitId": "majors", "tarotTitle": "The Return", "brainTitle": "The Pattern You Keep Noticing", "icon": "🔁", "color": "#d8ecf0", "fragment": "Sample placeholder fragment — a theme that shows up in totally different contexts, again and again." },
+    { "id": "sample-03", "suitId": "cups", "tarotTitle": "Ace of Cups", "brainTitle": "The Honest Conversation", "icon": "🗣️", "color": "#dde8f7", "fragment": "Sample placeholder fragment — a note about saying the hard thing to someone you care about." },
+    { "id": "sample-04", "suitId": "cups", "tarotTitle": "Two of Cups", "brainTitle": "The Friend Who Shows Up", "icon": "🤝", "color": "#fbe8d2", "fragment": "Sample placeholder fragment — someone whose consistency you've come to rely on." },
+    { "id": "sample-05", "suitId": "wands", "tarotTitle": "Ace of Wands", "brainTitle": "The Idea You Haven't Told Anyone", "icon": "🌱", "color": "#e1f0d9", "fragment": "Sample placeholder fragment — a project idea still too new and fragile to say out loud." },
+    { "id": "sample-06", "suitId": "wands", "tarotTitle": "Two of Wands", "brainTitle": "The Side Project That Won't Die", "icon": "⚙️", "color": "#e6e6e6", "fragment": "Sample placeholder fragment — something you keep coming back to even without a deadline." },
+    { "id": "sample-07", "suitId": "swords", "tarotTitle": "Ace of Swords", "brainTitle": "The Decision You're Avoiding", "icon": "🌪️", "color": "#e3e4ec", "fragment": "Sample placeholder fragment — a choice you already know the shape of but haven't made yet." },
+    { "id": "sample-08", "suitId": "swords", "tarotTitle": "Two of Swords", "brainTitle": "The Boundary You Need to Set", "icon": "🧱", "color": "#f6ddd2", "fragment": "Sample placeholder fragment — a limit you've been meaning to say out loud." },
+    { "id": "sample-09", "suitId": "pentacles", "tarotTitle": "Ace of Pentacles", "brainTitle": "The Milestone You're Underselling", "icon": "📈", "color": "#fbdfe0", "fragment": "Sample placeholder fragment — progress you made that you haven't given yourself credit for." },
+    { "id": "sample-10", "suitId": "pentacles", "tarotTitle": "Two of Pentacles", "brainTitle": "The Next Small Step", "icon": "🪜", "color": "#f1e6d2", "fragment": "Sample placeholder fragment — not the big leap, just the next concrete move." }
   ]
 }

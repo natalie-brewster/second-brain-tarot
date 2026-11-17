@@ -1,5 +1,5 @@
 import type { Card, Lens, Suit } from "@/types/tarot";
-import { suitLabel } from "@/types/tarot";
+import { cardLabel, suitLabel } from "@/types/tarot";
 
 export function CardFace({
   card,
@@ -25,7 +25,7 @@ export function CardFace({
       </span>
       <span className="text-3xl leading-none">{card.icon}</span>
       <span className="text-xs font-medium leading-tight text-neutral-800">
-        {card.title}
+        {cardLabel(card, lens)}
       </span>
     </div>
   );
