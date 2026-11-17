@@ -1,0 +1,56 @@
+{
+  "suits": [
+    {
+      "id": "majors",
+      "tarotName": "Major Arcana",
+      "tarotIcon": "✨",
+      "brainName": "Recurring Themes",
+      "brainIcon": "🧠",
+      "description": "Big ideas that keep resurfacing across years of notes."
+    },
+    {
+      "id": "cups",
+      "tarotName": "Cups",
+      "tarotIcon": "🫙",
+      "brainName": "People & Relationships",
+      "brainIcon": "💬",
+      "description": "Notes about the people in your life."
+    },
+    {
+      "id": "wands",
+      "tarotName": "Wands",
+      "tarotIcon": "🔥",
+      "brainName": "Creative & Project Ideas",
+      "brainIcon": "💡",
+      "description": "Sparks, drafts, and things you want to make."
+    },
+    {
+      "id": "swords",
+      "tarotName": "Swords",
+      "tarotIcon": "⚔️",
+      "brainName": "Hard Decisions",
+      "brainIcon": "⚖️",
+      "description": "Conflicts, tradeoffs, and things you're working through."
+    },
+    {
+      "id": "pentacles",
+      "tarotName": "Pentacles",
+      "tarotIcon": "🪙",
+      "brainName": "Career & Money",
+      "brainIcon": "💼",
+      "description": "Work, money, and the practical stuff."
+    }
+  ],
+  "cards": [
+    { "id": "sample-01", "suitId": "majors", "title": "The Unfinished Thing", "icon": "🌀", "fragment": "Sample placeholder fragment — something you started and keep circling back to without quite finishing." },
+    { "id": "sample-02", "suitId": "majors", "title": "The Pattern You Keep Noticing", "icon": "🔁", "fragment": "Sample placeholder fragment — a theme that shows up in totally different contexts, again and again." },
+    { "id": "sample-03", "suitId": "cups", "title": "The Honest Conversation", "icon": "🗣️", "fragment": "Sample placeholder fragment — a note about saying the hard thing to someone you care about." },
+    { "id": "sample-04", "suitId": "cups", "title": "The Friend Who Shows Up", "icon": "🤝", "fragment": "Sample placeholder fragment — someone whose consistency you've come to rely on." },
+    { "id": "sample-05", "suitId": "wands", "title": "The Idea You Haven't Told Anyone", "icon": "🌱", "fragment": "Sample placeholder fragment — a project idea still too new and fragile to say out loud." },
+    { "id": "sample-06", "suitId": "wands", "title": "The Side Project That Won't Die", "icon": "⚙️", "fragment": "Sample placeholder fragment — something you keep coming back to even without a deadline." },
+    { "id": "sample-07", "suitId": "swords", "title": "The Decision You're Avoiding", "icon": "🌪️", "fragment": "Sample placeholder fragment — a choice you already know the shape of but haven't made yet." },
+    { "id": "sample-08", "suitId": "swords", "title": "The Boundary You Need to Set", "icon": "🧱", "fragment": "Sample placeholder fragment — a limit you've been meaning to say out loud." },
+    { "id": "sample-09", "suitId": "pentacles", "title": "The Milestone You're Underselling", "icon": "📈", "fragment": "Sample placeholder fragment — progress you made that you haven't given yourself credit for." },
+    { "id": "sample-10", "suitId": "pentacles", "title": "The Next Small Step", "icon": "🪜", "fragment": "Sample placeholder fragment — not the big leap, just the next concrete move." }
+  ]
+}
