@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+dist/
+build/
+.DS_Store
+*.log
+
+# never commit real vault data
+/data/vault-real/
+*.vault-export.json
