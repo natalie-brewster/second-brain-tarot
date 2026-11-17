@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { Card } from "@/types/tarot";
+import type { Card, Lens, Suit } from "@/types/tarot";
 import { CardFace } from "./CardFace";
 import { seededRandom } from "@/lib/seeded-random";
 
@@ -12,11 +12,16 @@ const FAN_ROTATE_STEP = 5;
 
 export function DeckSpread({
   cards,
+  suits,
+  lens,
   onSelect,
 }: {
   cards: Card[];
+  suits: Suit[];
+  lens: Lens;
   onSelect: (card: Card) => void;
 }) {
+  const suitsById = new Map(suits.map((suit) => [suit.id, suit]));
   const center = (cards.length - 1) / 2;
   const containerWidth = STACK_ORIGIN_X + (cards.length - 1) * SPACING + CARD_WIDTH;
 
@@ -29,6 +34,8 @@ export function DeckSpread({
         {cards.map((card, i) => {
           const stackJitter = (seededRandom(card.id + "stack") - 0.5) * 8;
           const fanRotate = (i - center) * FAN_ROTATE_STEP;
+          const suit = suitsById.get(card.suitId);
+          if (!suit) return null;
 
           return (
             <motion.div
@@ -51,7 +58,7 @@ export function DeckSpread({
               }}
               onClick={() => onSelect(card)}
             >
-              <CardFace card={card} />
+              <CardFace card={card} suit={suit} lens={lens} />
             </motion.div>
           );
         })}
