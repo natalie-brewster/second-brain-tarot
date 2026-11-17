@@ -14,6 +14,7 @@ export interface Card {
   suitId: string;
   title: string;
   icon: string;
+  color: string;
   fragment: string;
   sourcePath?: string;
 }

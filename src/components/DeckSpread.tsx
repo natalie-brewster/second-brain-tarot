@@ -1,35 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useMemo } from "react";
 import type { Card } from "@/types/tarot";
 import { CardFace } from "./CardFace";
 import { seededRandom } from "@/lib/seeded-random";
 
-interface Placement {
-  card: Card;
-  xPct: number;
-  yPct: number;
-  rotate: number;
-}
-
-function computePlacements(cards: Card[]): Placement[] {
-  const cols = Math.ceil(Math.sqrt(cards.length));
-  const rows = Math.ceil(cards.length / cols);
-  return cards.map((card, i) => {
-    const col = i % cols;
-    const row = Math.floor(i / cols);
-    const jitterX = (seededRandom(card.id + "x") - 0.5) * (80 / cols);
-    const jitterY = (seededRandom(card.id + "y") - 0.5) * (80 / rows);
-    const rotate = (seededRandom(card.id + "r") - 0.5) * 24;
-    return {
-      card,
-      xPct: ((col + 0.5) / cols) * 100 + jitterX,
-      yPct: ((row + 0.5) / rows) * 100 + jitterY,
-      rotate,
-    };
-  });
-}
+const CARD_WIDTH = 112;
+const STACK_ORIGIN_X = 24;
+const SPACING = 56;
+const FAN_ROTATE_STEP = 5;
 
 export function DeckSpread({
   cards,
@@ -38,29 +17,45 @@ export function DeckSpread({
   cards: Card[];
   onSelect: (card: Card) => void;
 }) {
-  const placements = useMemo(() => computePlacements(cards), [cards]);
+  const center = (cards.length - 1) / 2;
+  const containerWidth = STACK_ORIGIN_X + (cards.length - 1) * SPACING + CARD_WIDTH;
 
   return (
-    <div className="relative h-[75vh] w-full">
-      {placements.map(({ card, xPct, yPct, rotate }, i) => (
-        <motion.div
-          key={card.id}
-          className="absolute cursor-pointer"
-          style={{ left: `${xPct}%`, top: `${yPct}%` }}
-          initial={{ opacity: 0, scale: 0.6, rotate: 0, x: "-50%", y: "-50%" }}
-          animate={{ opacity: 1, scale: 1, rotate, x: "-50%", y: "-50%" }}
-          transition={{
-            delay: i * 0.03,
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-          }}
-          whileHover={{ scale: 1.18, rotate: 0, zIndex: 50 }}
-          onClick={() => onSelect(card)}
-        >
-          <CardFace card={card} />
-        </motion.div>
-      ))}
+    <div className="w-full overflow-x-auto px-6">
+      <div
+        className="relative mx-auto h-56"
+        style={{ width: `${containerWidth}px` }}
+      >
+        {cards.map((card, i) => {
+          const stackJitter = (seededRandom(card.id + "stack") - 0.5) * 8;
+          const fanRotate = (i - center) * FAN_ROTATE_STEP;
+
+          return (
+            <motion.div
+              key={card.id}
+              className="absolute cursor-pointer"
+              style={{ left: STACK_ORIGIN_X, top: "50%" }}
+              initial={{ x: 0, y: "-50%", rotate: stackJitter }}
+              animate={{ x: i * SPACING, y: "-50%", rotate: fanRotate }}
+              transition={{
+                delay: i * 0.06,
+                type: "spring",
+                stiffness: 220,
+                damping: 22,
+              }}
+              whileHover={{
+                scale: 1.18,
+                rotate: 0,
+                y: "-65%",
+                zIndex: 50,
+              }}
+              onClick={() => onSelect(card)}
+            >
+              <CardFace card={card} />
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   );
 }
